@@ -8,8 +8,8 @@
         Title="Todoapp" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="73*"/>
-            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="138*"/>
             <ColumnDefinition Width="121*"/>
             <ColumnDefinition Width="40*"/>
@@ -18,7 +18,7 @@
         <DataGrid x:Name="dgTodolist" FontSize = "16" FontWeight = "Bold" Margin="10,10,10,10" Grid.ColumnSpan="6" AutoGenerateColumns="False" >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path = CreationDate }" IsReadOnly="True"   Header="CreationDate" Width="160"/>
-                <DataGridCheckBoxColumn  Binding="{Binding Path = IsDone, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"   Header="Done" Width="65"/>
+                <DataGridCheckBoxColumn Binding="{Binding Path = IsDone, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"   Header="Done" Width="65"/>
                 <DataGridTextColumn  Binding="{Binding Path = Text}" IsReadOnly="False"   Header="Todo" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>

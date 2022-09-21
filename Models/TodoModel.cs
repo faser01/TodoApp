@@ -25,8 +25,8 @@ namespace TodoApp.Models
 			
 		}
 
-		public bool isDone
-		{
+		public bool IsDone
+        {
 			get { return  _isDone; }
 			set
 			{

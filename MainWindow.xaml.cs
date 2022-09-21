@@ -47,10 +47,6 @@ namespace TodoApp
 
             }
 
-            
-            
-          
-
             dgTodolist.ItemsSource = _todoDataList;
             _todoDataList.ListChanged += _todoDataList_ListChanged;
         }
