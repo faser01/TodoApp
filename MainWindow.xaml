@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:TodoApp"
         mc:Ignorable="d"
         Title="Планировщик задач" Height="450" Width="800" Loaded="Window_Loaded">
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="109*"/>
@@ -15,10 +16,10 @@
             <ColumnDefinition Width="40*"/>
             <ColumnDefinition Width="392*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dgTodolist" FontSize = "16" FontWeight = "Bold" Margin="10,10,10,10" Grid.ColumnSpan="6" AutoGenerateColumns="False" >
+        <DataGrid x:Name="dgTodolist" Background="LimeGreen" FontSize = "16" FontWeight = "Bold" Margin="20,20,20,20" Grid.ColumnSpan="6" AutoGenerateColumns="False" >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path = CreationDate }" IsReadOnly="True"   Header="Время создания" Width="160"/>
-                <DataGridCheckBoxColumn Binding="{Binding Path = IsDone, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"   Header="Выполнено" Width="110"/>
+                <DataGridCheckBoxColumn Binding="{Binding Path = IsDone, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"  Header="Выполнено" Width="110"/>
                 <DataGridTextColumn  Binding="{Binding Path = Text}" IsReadOnly="False"   Header="Задача" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
